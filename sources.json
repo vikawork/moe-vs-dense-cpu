@@ -1,0 +1,68 @@
+{
+  "verifiedAt": "2026-11-10",
+  "models": [
+    {
+      "repo": "Qwen/Qwen3-30B-A3B-GGUF",
+      "revision": "e4d4bafdfb96a411a163846265362aceb0b9c63a",
+      "apiUrl": "https://huggingface.co/api/models/Qwen/Qwen3-30B-A3B-GGUF/revision/e4d4bafdfb96a411a163846265362aceb0b9c63a?blobs=true",
+      "file": "Qwen3-30B-A3B-Q4_K_M.gguf",
+      "bytes": 18556685824,
+      "sha256": "0d003f6662faee786ed5da3e31b29c978de5ae5d275c8794c606a7f3c01aa8f5",
+      "url": "https://huggingface.co/Qwen/Qwen3-30B-A3B-GGUF/resolve/e4d4bafdfb96a411a163846265362aceb0b9c63a/Qwen3-30B-A3B-Q4_K_M.gguf",
+      "license": "apache-2.0",
+      "licenseUrl": "https://huggingface.co/Qwen/Qwen3-30B-A3B-GGUF/raw/e4d4bafdfb96a411a163846265362aceb0b9c63a/LICENSE",
+      "cardUrl": "https://huggingface.co/Qwen/Qwen3-30B-A3B-GGUF/blob/e4d4bafdfb96a411a163846265362aceb0b9c63a/README.md",
+      "totalParametersBillions": 30.5,
+      "activeParametersBillions": 3.3
+    },
+    {
+      "repo": "Qwen/Qwen3-32B-GGUF",
+      "revision": "938a7432affaec9157f883a87164e2646ae17555",
+      "apiUrl": "https://huggingface.co/api/models/Qwen/Qwen3-32B-GGUF/revision/938a7432affaec9157f883a87164e2646ae17555?blobs=true",
+      "file": "Qwen3-32B-Q4_K_M.gguf",
+      "bytes": 19762149024,
+      "sha256": "efd971561896866f0e910cce52761ca77b1b138090c7f15fe284676d57d1f689",
+      "url": "https://huggingface.co/Qwen/Qwen3-32B-GGUF/resolve/938a7432affaec9157f883a87164e2646ae17555/Qwen3-32B-Q4_K_M.gguf",
+      "license": "apache-2.0",
+      "licenseUrl": "https://huggingface.co/Qwen/Qwen3-32B-GGUF/raw/938a7432affaec9157f883a87164e2646ae17555/LICENSE",
+      "cardUrl": "https://huggingface.co/Qwen/Qwen3-32B-GGUF/blob/938a7432affaec9157f883a87164e2646ae17555/README.md",
+      "totalParametersBillions": 32.8,
+      "activeParametersBillions": 32.8
+    }
+  ],
+  "totalModelBytes": 38318834848,
+  "predictedDenseActiveDivMoeActive": 9.93939393939394,
+  "container": {
+    "image": "ghcr.io/ggml-org/llama.cpp:full-b12211@sha256:8960de326dd60972cc4d442531f4efa006416d5896da2a39f0def0b55cbcb0c2",
+    "amd64ManifestDigest": "sha256:32501531fc3e209d2cf8c46ea80da0bd41a4b4d832664bcf5d3b6ce920efe461",
+    "release": "b12211",
+    "revision": "7d7f0287530bc8981690f361d8c1627dbae1c99a",
+    "releaseUrl": "https://github.com/ggml-org/llama.cpp/releases/tag/b12211",
+    "dockerfileUrl": "https://github.com/ggml-org/llama.cpp/blob/b12211/.devops/cpu.Dockerfile",
+    "benchSourceUrl": "https://github.com/ggml-org/llama.cpp/blob/b12211/tools/llama-bench/llama-bench.cpp",
+    "compressedLayerBytes": 1136146315,
+    "expectedBinary": "/app/llama-bench",
+    "expectedVersionCommand": [
+      "/app/llama-bench",
+      "--version"
+    ],
+    "recommendedBenchmarkCommand": [
+      "/app/llama-bench",
+      "-m",
+      "/models/MODEL.gguf",
+      "-p",
+      "512",
+      "-n",
+      "128",
+      "-r",
+      "5",
+      "-t",
+      "4",
+      "-ngl",
+      "0",
+      "-o",
+      "json"
+    ],
+    "warmup": "Default enabled: one full prompt warmup and one generated-token warmup per test, before timed repetition loop; do not pass --no-warmup."
+  }
+}

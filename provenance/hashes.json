@@ -1,0 +1,42 @@
+{
+  "Qwen3-30B-A3B-GGUF.pinned-api.json": {
+    "sha256": "cf5612c4bbc696a0cbe7b3a32936d5f889dcfa0e0268cdf09fe98ab9a1751d2a",
+    "bytes": 7033
+  },
+  "Qwen3-30B-A3B-GGUF.README.md": {
+    "sha256": "8e6cd66274b2e661e2d972efcfd5cb86f29f7773e580af78550bc9f8175b3ad3",
+    "bytes": 7691
+  },
+  "Qwen3-30B-A3B-GGUF.LICENSE": {
+    "sha256": "5de36594c10839788a8c589443a8ef9d8b8d17c65a1b5807206ae037fc36c6bd",
+    "bytes": 11544
+  },
+  "Qwen3-32B-GGUF.pinned-api.json": {
+    "sha256": "8208e1e7b95c84aea35683053f37978fa39af5aeba5f2c61a63b17aa463f68ab",
+    "bytes": 6997
+  },
+  "Qwen3-32B-GGUF.README.md": {
+    "sha256": "8d8c6441b826e340a16397475d29db19f83f13481e6488f683e6e67c446eb6b8",
+    "bytes": 7497
+  },
+  "Qwen3-32B-GGUF.LICENSE": {
+    "sha256": "5de36594c10839788a8c589443a8ef9d8b8d17c65a1b5807206ae037fc36c6bd",
+    "bytes": 11544
+  },
+  "image-full-b12211.json": {
+    "sha256": "8960de326dd60972cc4d442531f4efa006416d5896da2a39f0def0b55cbcb0c2",
+    "bytes": 1419
+  },
+  "image-full-amd64-manifest.json": {
+    "sha256": "32501531fc3e209d2cf8c46ea80da0bd41a4b4d832664bcf5d3b6ce920efe461",
+    "bytes": 2131
+  },
+  "image-full-amd64-config.json": {
+    "sha256": "e13e80b71c4aefb8111cbb89212ef191dbcfb4eedd05e78b1414683a8ef54745",
+    "bytes": 7870
+  },
+  "llama-git_ref_tags_b12211.json": {
+    "sha256": "02432c5bfebbc334235a0b463ae61faf3c63d0eb5abc3637c5b2a17a7f40b0b3",
+    "bytes": 337
+  }
+}

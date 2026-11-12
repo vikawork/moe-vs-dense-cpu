@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "demo_id": "moe-vs-dense-cpu",
+  "manifest_sha256": "eed27cfd87c05b99741e23d049dc6a89e23a86186770b3ce6b99fb4e1962b710",
+  "status": "failed",
+  "error": "version-llama-bench exited 127: /app/llama-bench: error while loading shared libraries: libllama-bench-impl.so: cannot open shared object file: No such file or directory\n",
+  "started_at": "2026-11-09T20:36:58.959914Z",
+  "ended_at": "2026-11-09T20:39:26.680771Z",
+  "image_digest": "ghcr.io/ggml-org/llama.cpp:full-b12211@sha256:8960de326dd60972cc4d442531f4efa006416d5896da2a39f0def0b55cbcb0c2",
+  "image_inspections": {
+    "ghcr.io/ggml-org/llama.cpp:full-b12211@sha256:8960de326dd60972cc4d442531f4efa006416d5896da2a39f0def0b55cbcb0c2": {
+      "Id": "sha256:e13e80b71c4aefb8111cbb89212ef191dbcfb4eedd05e78b1414683a8ef54745",
+      "RepoTags": [],
+      "RepoDigests": [
+        "ghcr.io/ggml-org/llama.cpp@sha256:8960de326dd60972cc4d442531f4efa006416d5896da2a39f0def0b55cbcb0c2"
+      ],
+      "Comment": "buildkit.dockerfile.v0",
+      "Created": "2026-11-09T04:37:48.478333462Z",
+      "Config": {
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        ],
+        "Entrypoint": [
+          "/app/tools.sh"
+        ],
+        "WorkingDir": "/app",
+        "Labels": {
+          "org.opencontainers.image.created": "2026-11-09T04:25:12Z",
+          "org.opencontainers.image.description": "LLM inference in C/C++",
+          "org.opencontainers.image.revision": "7d7f0287530bc8981690f361d8c1627dbae1c99a",
+          "org.opencontainers.image.source": "https://github.com/ggml-org/llama.cpp",
+          "org.opencontainers.image.title": "llama.cpp",
+          "org.opencontainers.image.url": "https://github.com/ggml-org/llama.cpp",
+          "org.opencontainers.image.version": "b12211"
+        }
+      },
+      "Architecture": "amd64",
+      "Os": "linux",
+      "Size": 2915508955,
+      "GraphDriver": {
+        "Data": {
+          "LowerDir": "/var/lib/docker/overlay2/f96a27983f891d6c470fc7d2119ea3ce5ae2552ad3418d957418de985380af43/diff:/var/lib/docker/overlay2/23eeb6416cb47f495ffa4242710a2af855475a5bf54c7c8a33459204a513d8f8/diff:/var/lib/docker/overlay2/4b5a9cb99bdf8e9daf4579a1f6ef5a1f14460b9384982871dd33519d1d94b5ae/diff:/var/lib/docker/overlay2/c93e23cbd58f47c5c36c70a212b11a4a93b3c7dab1e92d9daff7422a276aec5a/diff:/var/lib/docker/overlay2/394c2f65f01ad46fd8e97830eaa5be9b86e289299b5cd9dbf82b1ebe9d5494aa/diff:/var/lib/docker/overlay2/2f5e92e0f56b6559552bb39368e2eff98ddad1c23da5037548687048a9d534df/diff",
+          "MergedDir": "/var/lib/docker/overlay2/59fcd4b80d3f7d7e0dd2247a5b27507866b8b4df884afef75a32a6201175c7ef/merged",
+          "UpperDir": "/var/lib/docker/overlay2/59fcd4b80d3f7d7e0dd2247a5b27507866b8b4df884afef75a32a6201175c7ef/diff",
+          "WorkDir": "/var/lib/docker/overlay2/59fcd4b80d3f7d7e0dd2247a5b27507866b8b4df884afef75a32a6201175c7ef/work"
+        },
+        "Name": "overlay2"
+      },
+      "RootFS": {
+        "Type": "layers",
+        "Layers": [
+          "sha256:5cac300e390e2fd748b258618f403b7813229929ad6de903b0c52a210a930824",
+          "sha256:5f4be2c3badedfd7149d008a4902427c98e708c70031dc19b4264160a545df19",
+          "sha256:c36b58738bbf0475772f8b1d995593ffd5b4a61b800e27fd9fba30a4fa8919d2",
+          "sha256:a9977f4ae4b7808eb4326ea27ffb15f9f89c94984a5ff9da8bb3e532a6a2fc88",
+          "sha256:883d883a251c9faefba28ddd03cd3068f5f050416222a80b73787e1761c33945",
+          "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+          "sha256:e7e636e79f115dfab87d1458b7a6c86e79919b1b12ed6475b36a0ce3e1b26ec7"
+        ]
+      },
+      "Metadata": {
+        "LastTagTime": "0001-01-01T00:00:00Z"
+      }
+    }
+  },
+  "host": {
+    "target": "oldpc",
+    "before": {
+      "cpu_model": "Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz",
+      "physical_cores": 4,
+      "logical_cores": 8,
+      "ram_bytes": 33576022016,
+      "kernel": "7.2.11-arch1-1",
+      "load_average": [
+        0,
+        0.111328125,
+        0.51171875
+      ]
+    },
+    "after": {
+      "cpu_model": "Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz",
+      "physical_cores": 4,
+      "logical_cores": 8,
+      "ram_bytes": 33576022016,
+      "kernel": "7.2.11-arch1-1",
+      "load_average": [
+        0.81396484375,
+        0.3447265625,
+        0.54150390625
+      ]
+    }
+  },
+  "tool_versions": {},
+  "file_hashes": {
+    "assets/scripts/download.py": "286093be8414ec9ca5ca1fba2b0bdcdeba84d831cb9a72034c3d540ee9110ad8"
+  },
+  "steps": [
+    {
+      "id": "pull-image",
+      "command": [
+        "docker",
+        "pull",
+        "ghcr.io/ggml-org/llama.cpp:full-b12211@sha256:8960de326dd60972cc4d442531f4efa006416d5896da2a39f0def0b55cbcb0c2"
+      ],
+      "stdout": "ghcr.io/ggml-org/llama.cpp@sha256:8960de326dd60972cc4d442531f4efa006416d5896da2a39f0def0b55cbcb0c2: Pulling from ggml-org/llama.cpp\nedafa32f5d9e: Pulling fs layer\nf3f25b84a7d7: Pulling fs layer\nae262a44079f: Pulling fs layer\n094b26576980: Pulling fs layer\n58ee3447e43a: Pulling fs layer\n4f4fb700ef54: Pulling fs layer\n4fcb6af4aff8: Pulling fs layer\n4f4fb700ef54: Waiting\n4fcb6af4aff8: Waiting\n094b26576980: Waiting\nf3f25b84a7d7: Verifying Checksum\nf3f25b84a7d7: Download complete\n094b26576980: Verifying Checksum\n094b26576980: Download complete\nedafa32f5d9e: Verifying Checksum\nedafa32f5d9e: Download complete\n4f4fb700ef54: Verifying Checksum\n4f4fb700ef54: Download complete\nedafa32f5d9e: Pull complete\nf3f25b84a7d7: Pull complete\n58ee3447e43a: Download complete\nae262a44079f: Verifying Checksum\nae262a44079f: Download complete\nae262a44079f: Pull complete\n094b26576980: Pull complete\n58ee3447e43a: Pull complete\n4f4fb700ef54: Pull complete\n4fcb6af4aff8: Download complete\n4fcb6af4aff8: Pull complete\nDigest: sha256:8960de326dd60972cc4d442531f4efa006416d5896da2a39f0def0b55cbcb0c2\nStatus: Downloaded newer image for ghcr.io/ggml-org/llama.cpp@sha256:8960de326dd60972cc4d442531f4efa006416d5896da2a39f0def0b55cbcb0c2\nghcr.io/ggml-org/llama.cpp:full-b12211@sha256:8960de326dd60972cc4d442531f4efa006416d5896da2a39f0def0b55cbcb0c2\n",
+      "stderr": "",
+      "exit_code": 0,
+      "started_at": "2026-11-09T20:36:58.982764Z",
+      "ended_at": "2026-11-09T20:39:21.526304Z",
+      "network": true
+    },
+    {
+      "id": "inspect-image",
+      "command": [
+        "docker",
+        "image",
+        "inspect",
+        "ghcr.io/ggml-org/llama.cpp:full-b12211@sha256:8960de326dd60972cc4d442531f4efa006416d5896da2a39f0def0b55cbcb0c2"
+      ],
+      "stdout": "[\n    {\n        \"Id\": \"sha256:e13e80b71c4aefb8111cbb89212ef191dbcfb4eedd05e78b1414683a8ef54745\",\n        \"RepoTags\": [],\n        \"RepoDigests\": [\n            \"ghcr.io/ggml-org/llama.cpp@sha256:8960de326dd60972cc4d442531f4efa006416d5896da2a39f0def0b55cbcb0c2\"\n        ],\n        \"Comment\": \"buildkit.dockerfile.v0\",\n        \"Created\": \"2026-11-09T04:37:48.478333462Z\",\n        \"Config\": {\n            \"Env\": [\n                \"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"\n            ],\n            \"Entrypoint\": [\n                \"/app/tools.sh\"\n            ],\n            \"WorkingDir\": \"/app\",\n            \"Labels\": {\n                \"org.opencontainers.image.created\": \"2026-11-09T04:25:12Z\",\n                \"org.opencontainers.image.description\": \"LLM inference in C/C++\",\n                \"org.opencontainers.image.revision\": \"7d7f0287530bc8981690f361d8c1627dbae1c99a\",\n                \"org.opencontainers.image.source\": \"https://github.com/ggml-org/llama.cpp\",\n                \"org.opencontainers.image.title\": \"llama.cpp\",\n                \"org.opencontainers.image.url\": \"https://github.com/ggml-org/llama.cpp\",\n                \"org.opencontainers.image.version\": \"b12211\"\n            }\n        },\n        \"Architecture\": \"amd64\",\n        \"Os\": \"linux\",\n        \"Size\": 2915508955,\n        \"GraphDriver\": {\n            \"Data\": {\n                \"LowerDir\": \"/var/lib/docker/overlay2/f96a27983f891d6c470fc7d2119ea3ce5ae2552ad3418d957418de985380af43/diff:/var/lib/docker/overlay2/23eeb6416cb47f495ffa4242710a2af855475a5bf54c7c8a33459204a513d8f8/diff:/var/lib/docker/overlay2/4b5a9cb99bdf8e9daf4579a1f6ef5a1f14460b9384982871dd33519d1d94b5ae/diff:/var/lib/docker/overlay2/c93e23cbd58f47c5c36c70a212b11a4a93b3c7dab1e92d9daff7422a276aec5a/diff:/var/lib/docker/overlay2/394c2f65f01ad46fd8e97830eaa5be9b86e289299b5cd9dbf82b1ebe9d5494aa/diff:/var/lib/docker/overlay2/2f5e92e0f56b6559552bb39368e2eff98ddad1c23da5037548687048a9d534df/diff\",\n                \"MergedDir\": \"/var/lib/docker/overlay2/59fcd4b80d3f7d7e0dd2247a5b27507866b8b4df884afef75a32a6201175c7ef/merged\",\n                \"UpperDir\": \"/var/lib/docker/overlay2/59fcd4b80d3f7d7e0dd2247a5b27507866b8b4df884afef75a32a6201175c7ef/diff\",\n                \"WorkDir\": \"/var/lib/docker/overlay2/59fcd4b80d3f7d7e0dd2247a5b27507866b8b4df884afef75a32a6201175c7ef/work\"\n            },\n            \"Name\": \"overlay2\"\n        },\n        \"RootFS\": {\n            \"Type\": \"layers\",\n            \"Layers\": [\n                \"sha256:5cac300e390e2fd748b258618f403b7813229929ad6de903b0c52a210a930824\",\n                \"sha256:5f4be2c3badedfd7149d008a4902427c98e708c70031dc19b4264160a545df19\",\n                \"sha256:c36b58738bbf0475772f8b1d995593ffd5b4a61b800e27fd9fba30a4fa8919d2\",\n                \"sha256:a9977f4ae4b7808eb4326ea27ffb15f9f89c94984a5ff9da8bb3e532a6a2fc88\",\n                \"sha256:883d883a251c9faefba28ddd03cd3068f5f050416222a80b73787e1761c33945\",\n                \"sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef\",\n                \"sha256:e7e636e79f115dfab87d1458b7a6c86e79919b1b12ed6475b36a0ce3e1b26ec7\"\n            ]\n        },\n        \"Metadata\": {\n            \"LastTagTime\": \"0001-01-01T00:00:00Z\"\n        }\n    }\n]\n",
+      "stderr": "",
+      "exit_code": 0,
+      "started_at": "2026-11-09T20:39:21.526347Z",
+      "ended_at": "2026-11-09T20:39:21.605130Z",
+      "network": false
+    },
+    {
+      "id": "version-llama-bench",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "vikawork-moe-vs-dense-cpu-131551-1",
+        "--network",
+        "none",
+        "--mount",
+        "type=bind,src=/fast/vikawork,dst=/work",
+        "--mount",
+        "type=bind,src=/scratch/vikawork/demo/moe-vs-dense-cpu/assets,dst=/assets,readonly",
+        "--workdir",
+        "/work",
+        "--entrypoint",
+        "/app/llama-bench",
+        "ghcr.io/ggml-org/llama.cpp:full-b12211@sha256:8960de326dd60972cc4d442531f4efa006416d5896da2a39f0def0b55cbcb0c2",
+        "--version"
+      ],
+      "stdout": "",
+      "stderr": "/app/llama-bench: error while loading shared libraries: libllama-bench-impl.so: cannot open shared object file: No such file or directory\n",
+      "exit_code": 127,
+      "started_at": "2026-11-09T20:39:21.605284Z",
+      "ended_at": "2026-11-09T20:39:26.626209Z",
+      "network": false
+    }
+  ]
+}

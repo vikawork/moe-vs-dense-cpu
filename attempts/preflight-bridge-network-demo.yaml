@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "id": "moe-vs-dense-cpu",
+  "host": "oldpc",
+  "workspace": "/fast/vikawork",
+  "image": "ghcr.io/ggml-org/llama.cpp:full-b12211@sha256:8960de326dd60972cc4d442531f4efa006416d5896da2a39f0def0b55cbcb0c2",
+  "image_pull_network": true,
+  "assets": [
+    {
+      "path": "scripts/download.py",
+      "sha256": "286093be8414ec9ca5ca1fba2b0bdcdeba84d831cb9a72034c3d540ee9110ad8",
+      "size": 1648
+    }
+  ],
+  "files": [
+    {
+      "path": "models/Qwen3-30B-A3B-Q4_K_M.gguf",
+      "sha256": "0d003f6662faee786ed5da3e31b29c978de5ae5d275c8794c606a7f3c01aa8f5",
+      "size": 18556685824,
+      "url": "https://huggingface.co/Qwen/Qwen3-30B-A3B-GGUF/resolve/e4d4bafdfb96a411a163846265362aceb0b9c63a/Qwen3-30B-A3B-Q4_K_M.gguf"
+    },
+    {
+      "path": "models/Qwen3-32B-Q4_K_M.gguf",
+      "sha256": "efd971561896866f0e910cce52761ca77b1b138090c7f15fe284676d57d1f689",
+      "size": 19762149024,
+      "url": "https://huggingface.co/Qwen/Qwen3-32B-GGUF/resolve/938a7432affaec9157f883a87164e2646ae17555/Qwen3-32B-Q4_K_M.gguf"
+    }
+  ],
+  "tools": [
+    {
+      "id": "llama-bench",
+      "command": [
+        "env",
+        "LD_LIBRARY_PATH=/app",
+        "/app/llama-bench",
+        "--version"
+      ],
+      "expected": "12211"
+    }
+  ],
+  "steps": [
+    {
+      "id": "download-models",
+      "command": [
+        "python3",
+        "/assets/scripts/download.py",
+        "[{\"path\": \"models/Qwen3-30B-A3B-Q4_K_M.gguf\", \"sha256\": \"0d003f6662faee786ed5da3e31b29c978de5ae5d275c8794c606a7f3c01aa8f5\", \"size\": 18556685824, \"url\": \"https://huggingface.co/Qwen/Qwen3-30B-A3B-GGUF/resolve/e4d4bafdfb96a411a163846265362aceb0b9c63a/Qwen3-30B-A3B-Q4_K_M.gguf\"}, {\"path\": \"models/Qwen3-32B-Q4_K_M.gguf\", \"sha256\": \"efd971561896866f0e910cce52761ca77b1b138090c7f15fe284676d57d1f689\", \"size\": 19762149024, \"url\": \"https://huggingface.co/Qwen/Qwen3-32B-GGUF/resolve/938a7432affaec9157f883a87164e2646ae17555/Qwen3-32B-Q4_K_M.gguf\"}]"
+      ],
+      "network": true,
+      "kind": "download",
+      "reason": "Download publisher GGUFs at immutable revisions; verify API LFS SHA256 before cache publication.",
+      "outputs": [
+        "models/Qwen3-30B-A3B-Q4_K_M.gguf",
+        "models/Qwen3-32B-Q4_K_M.gguf"
+      ]
+    },
+    {
+      "id": "bench-moe",
+      "kind": "benchmark",
+      "command": [
+        "env",
+        "LD_LIBRARY_PATH=/app",
+        "/app/llama-bench",
+        "-m",
+        "/work/models/Qwen3-30B-A3B-Q4_K_M.gguf",
+        "-p",
+        "512",
+        "-n",
+        "128",
+        "-r",
+        "5",
+        "-t",
+        "4",
+        "-ngl",
+        "0",
+        "-o",
+        "json"
+      ],
+      "network": false,
+      "outputs": [
+        "demo-1/results/moe.json"
+      ],
+      "stdout_file": "demo-1/results/moe.json"
+    },
+    {
+      "id": "bench-dense",
+      "kind": "benchmark",
+      "command": [
+        "env",
+        "LD_LIBRARY_PATH=/app",
+        "/app/llama-bench",
+        "-m",
+        "/work/models/Qwen3-32B-Q4_K_M.gguf",
+        "-p",
+        "512",
+        "-n",
+        "128",
+        "-r",
+        "5",
+        "-t",
+        "4",
+        "-ngl",
+        "0",
+        "-o",
+        "json"
+      ],
+      "network": false,
+      "outputs": [
+        "demo-1/results/dense.json"
+      ],
+      "stdout_file": "demo-1/results/dense.json"
+    }
+  ]
+}

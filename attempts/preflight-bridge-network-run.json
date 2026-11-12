@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "demo_id": "moe-vs-dense-cpu",
+  "manifest_sha256": "bb38d7ccd012f0d65a717d654516dab664589095286317abda0b5fc484c44b94",
+  "status": "failed",
+  "error": "download-models exited 1: lient.py\", line 1066, in send\n    self.connect()\n    ~~~~~~~~~~~~^^\n  File \"/usr/lib/python3.14/http/client.py\", line 1501, in connect\n    super().connect()\n    ~~~~~~~~~~~~~~~^^\n  File \"/usr/lib/python3.14/http/client.py\", line 1032, in connect\n    self.sock = self._create_connection(\n                ~~~~~~~~~~~~~~~~~~~~~~~^\n        (self.host,self.port), self.timeout, self.source_address)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/socket.py\", line 870, in create_connection\n    raise exceptions[0]\n  File \"/usr/lib/python3.14/socket.py\", line 855, in create_connection\n    sock.connect(sa)\n    ~~~~~~~~~~~~^^^^\nOSError: [Errno 101] Network is unreachable\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/assets/scripts/download.py\", line 30, in <module>\n    with urllib.request.urlopen(url, timeout=120) as response, part.open(\"wb\") as dst:\n         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/urllib/request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/urllib/request.py\", line 487, in open\n    response = self._open(req, data)\n  File \"/usr/lib/python3.14/urllib/request.py\", line 504, in _open\n    result = self._call_chain(self.handle_open, protocol, protocol +\n                              '_open', req)\n  File \"/usr/lib/python3.14/urllib/request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"/usr/lib/python3.14/urllib/request.py\", line 1369, in https_open\n    return self.do_open(http.client.HTTPSConnection, req,\n           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                        context=self._context)\n                        ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/urllib/request.py\", line 1324, in do_open\n    raise URLError(err)\nurllib.error.URLError: <urlopen error [Errno 101] Network is unreachable>\n",
+  "started_at": "2026-11-09T20:39:56.650056Z",
+  "ended_at": "2026-11-09T20:40:08.722152Z",
+  "image_digest": "ghcr.io/ggml-org/llama.cpp:full-b12211@sha256:8960de326dd60972cc4d442531f4efa006416d5896da2a39f0def0b55cbcb0c2",
+  "image_inspections": {
+    "ghcr.io/ggml-org/llama.cpp:full-b12211@sha256:8960de326dd60972cc4d442531f4efa006416d5896da2a39f0def0b55cbcb0c2": {
+      "Id": "sha256:e13e80b71c4aefb8111cbb89212ef191dbcfb4eedd05e78b1414683a8ef54745",
+      "RepoTags": [],
+      "RepoDigests": [
+        "ghcr.io/ggml-org/llama.cpp@sha256:8960de326dd60972cc4d442531f4efa006416d5896da2a39f0def0b55cbcb0c2"
+      ],
+      "Comment": "buildkit.dockerfile.v0",
+      "Created": "2026-11-09T04:37:48.478333462Z",
+      "Config": {
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        ],
+        "Entrypoint": [
+          "/app/tools.sh"
+        ],
+        "WorkingDir": "/app",
+        "Labels": {
+          "org.opencontainers.image.created": "2026-11-09T04:25:12Z",
+          "org.opencontainers.image.description": "LLM inference in C/C++",
+          "org.opencontainers.image.revision": "7d7f0287530bc8981690f361d8c1627dbae1c99a",
+          "org.opencontainers.image.source": "https://github.com/ggml-org/llama.cpp",
+          "org.opencontainers.image.title": "llama.cpp",
+          "org.opencontainers.image.url": "https://github.com/ggml-org/llama.cpp",
+          "org.opencontainers.image.version": "b12211"
+        }
+      },
+      "Architecture": "amd64",
+      "Os": "linux",
+      "Size": 2915508955,
+      "GraphDriver": {
+        "Data": {
+          "LowerDir": "/var/lib/docker/overlay2/f96a27983f891d6c470fc7d2119ea3ce5ae2552ad3418d957418de985380af43/diff:/var/lib/docker/overlay2/23eeb6416cb47f495ffa4242710a2af855475a5bf54c7c8a33459204a513d8f8/diff:/var/lib/docker/overlay2/4b5a9cb99bdf8e9daf4579a1f6ef5a1f14460b9384982871dd33519d1d94b5ae/diff:/var/lib/docker/overlay2/c93e23cbd58f47c5c36c70a212b11a4a93b3c7dab1e92d9daff7422a276aec5a/diff:/var/lib/docker/overlay2/394c2f65f01ad46fd8e97830eaa5be9b86e289299b5cd9dbf82b1ebe9d5494aa/diff:/var/lib/docker/overlay2/2f5e92e0f56b6559552bb39368e2eff98ddad1c23da5037548687048a9d534df/diff",
+          "MergedDir": "/var/lib/docker/overlay2/59fcd4b80d3f7d7e0dd2247a5b27507866b8b4df884afef75a32a6201175c7ef/merged",
+          "UpperDir": "/var/lib/docker/overlay2/59fcd4b80d3f7d7e0dd2247a5b27507866b8b4df884afef75a32a6201175c7ef/diff",
+          "WorkDir": "/var/lib/docker/overlay2/59fcd4b80d3f7d7e0dd2247a5b27507866b8b4df884afef75a32a6201175c7ef/work"
+        },
+        "Name": "overlay2"
+      },
+      "RootFS": {
+        "Type": "layers",
+        "Layers": [
+          "sha256:5cac300e390e2fd748b258618f403b7813229929ad6de903b0c52a210a930824",
+          "sha256:5f4be2c3badedfd7149d008a4902427c98e708c70031dc19b4264160a545df19",
+          "sha256:c36b58738bbf0475772f8b1d995593ffd5b4a61b800e27fd9fba30a4fa8919d2",
+          "sha256:a9977f4ae4b7808eb4326ea27ffb15f9f89c94984a5ff9da8bb3e532a6a2fc88",
+          "sha256:883d883a251c9faefba28ddd03cd3068f5f050416222a80b73787e1761c33945",
+          "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+          "sha256:e7e636e79f115dfab87d1458b7a6c86e79919b1b12ed6475b36a0ce3e1b26ec7"
+        ]
+      },
+      "Metadata": {
+        "LastTagTime": "0001-01-01T00:00:00Z"
+      }
+    }
+  },
+  "host": {
+    "target": "oldpc",
+    "before": {
+      "cpu_model": "Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz",
+      "physical_cores": 4,
+      "logical_cores": 8,
+      "ram_bytes": 33576022016,
+      "kernel": "7.2.11-arch1-1",
+      "load_average": [
+        0.49267578125,
+        0.310546875,
+        0.52392578125
+      ]
+    },
+    "after": {
+      "cpu_model": "Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz",
+      "physical_cores": 4,
+      "logical_cores": 8,
+      "ram_bytes": 33576022016,
+      "kernel": "7.2.11-arch1-1",
+      "load_average": [
+        0.51904296875,
+        0.3271484375,
+        0.5263671875
+      ]
+    }
+  },
+  "tool_versions": {
+    "llama-bench": "load_backend: loaded CPU backend from /app/libggml-cpu-haswell.so\nversion: 0.9.0-dev (build 12211, commit 7d7f02875)\nbuilt with GNU 15.2.0 for Linux x86_64\n"
+  },
+  "file_hashes": {
+    "assets/scripts/download.py": "286093be8414ec9ca5ca1fba2b0bdcdeba84d831cb9a72034c3d540ee9110ad8"
+  },
+  "steps": [
+    {
+      "id": "inspect-image",
+      "command": [
+        "docker",
+        "image",
+        "inspect",
+        "ghcr.io/ggml-org/llama.cpp:full-b12211@sha256:8960de326dd60972cc4d442531f4efa006416d5896da2a39f0def0b55cbcb0c2"
+      ],
+      "stdout": "[\n    {\n        \"Id\": \"sha256:e13e80b71c4aefb8111cbb89212ef191dbcfb4eedd05e78b1414683a8ef54745\",\n        \"RepoTags\": [],\n        \"RepoDigests\": [\n            \"ghcr.io/ggml-org/llama.cpp@sha256:8960de326dd60972cc4d442531f4efa006416d5896da2a39f0def0b55cbcb0c2\"\n        ],\n        \"Comment\": \"buildkit.dockerfile.v0\",\n        \"Created\": \"2026-11-09T04:37:48.478333462Z\",\n        \"Config\": {\n            \"Env\": [\n                \"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"\n            ],\n            \"Entrypoint\": [\n                \"/app/tools.sh\"\n            ],\n            \"WorkingDir\": \"/app\",\n            \"Labels\": {\n                \"org.opencontainers.image.created\": \"2026-11-09T04:25:12Z\",\n                \"org.opencontainers.image.description\": \"LLM inference in C/C++\",\n                \"org.opencontainers.image.revision\": \"7d7f0287530bc8981690f361d8c1627dbae1c99a\",\n                \"org.opencontainers.image.source\": \"https://github.com/ggml-org/llama.cpp\",\n                \"org.opencontainers.image.title\": \"llama.cpp\",\n                \"org.opencontainers.image.url\": \"https://github.com/ggml-org/llama.cpp\",\n                \"org.opencontainers.image.version\": \"b12211\"\n            }\n        },\n        \"Architecture\": \"amd64\",\n        \"Os\": \"linux\",\n        \"Size\": 2915508955,\n        \"GraphDriver\": {\n            \"Data\": {\n                \"LowerDir\": \"/var/lib/docker/overlay2/f96a27983f891d6c470fc7d2119ea3ce5ae2552ad3418d957418de985380af43/diff:/var/lib/docker/overlay2/23eeb6416cb47f495ffa4242710a2af855475a5bf54c7c8a33459204a513d8f8/diff:/var/lib/docker/overlay2/4b5a9cb99bdf8e9daf4579a1f6ef5a1f14460b9384982871dd33519d1d94b5ae/diff:/var/lib/docker/overlay2/c93e23cbd58f47c5c36c70a212b11a4a93b3c7dab1e92d9daff7422a276aec5a/diff:/var/lib/docker/overlay2/394c2f65f01ad46fd8e97830eaa5be9b86e289299b5cd9dbf82b1ebe9d5494aa/diff:/var/lib/docker/overlay2/2f5e92e0f56b6559552bb39368e2eff98ddad1c23da5037548687048a9d534df/diff\",\n                \"MergedDir\": \"/var/lib/docker/overlay2/59fcd4b80d3f7d7e0dd2247a5b27507866b8b4df884afef75a32a6201175c7ef/merged\",\n                \"UpperDir\": \"/var/lib/docker/overlay2/59fcd4b80d3f7d7e0dd2247a5b27507866b8b4df884afef75a32a6201175c7ef/diff\",\n                \"WorkDir\": \"/var/lib/docker/overlay2/59fcd4b80d3f7d7e0dd2247a5b27507866b8b4df884afef75a32a6201175c7ef/work\"\n            },\n            \"Name\": \"overlay2\"\n        },\n        \"RootFS\": {\n            \"Type\": \"layers\",\n            \"Layers\": [\n                \"sha256:5cac300e390e2fd748b258618f403b7813229929ad6de903b0c52a210a930824\",\n                \"sha256:5f4be2c3badedfd7149d008a4902427c98e708c70031dc19b4264160a545df19\",\n                \"sha256:c36b58738bbf0475772f8b1d995593ffd5b4a61b800e27fd9fba30a4fa8919d2\",\n                \"sha256:a9977f4ae4b7808eb4326ea27ffb15f9f89c94984a5ff9da8bb3e532a6a2fc88\",\n                \"sha256:883d883a251c9faefba28ddd03cd3068f5f050416222a80b73787e1761c33945\",\n                \"sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef\",\n                \"sha256:e7e636e79f115dfab87d1458b7a6c86e79919b1b12ed6475b36a0ce3e1b26ec7\"\n            ]\n        },\n        \"Metadata\": {\n            \"LastTagTime\": \"0001-01-01T00:00:00Z\"\n        }\n    }\n]\n",
+      "stderr": "",
+      "exit_code": 0,
+      "started_at": "2026-11-09T20:39:56.665457Z",
+      "ended_at": "2026-11-09T20:39:56.678891Z",
+      "network": false
+    },
+    {
+      "id": "version-llama-bench",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "vikawork-moe-vs-dense-cpu-131855-1",
+        "--network",
+        "none",
+        "--mount",
+        "type=bind,src=/fast/vikawork,dst=/work",
+        "--mount",
+        "type=bind,src=/scratch/vikawork/demo/moe-vs-dense-cpu/assets,dst=/assets,readonly",
+        "--workdir",
+        "/work",
+        "--entrypoint",
+        "env",
+        "ghcr.io/ggml-org/llama.cpp:full-b12211@sha256:8960de326dd60972cc4d442531f4efa006416d5896da2a39f0def0b55cbcb0c2",
+        "LD_LIBRARY_PATH=/app",
+        "/app/llama-bench",
+        "--version"
+      ],
+      "stdout": "",
+      "stderr": "load_backend: loaded CPU backend from /app/libggml-cpu-haswell.so\nversion: 0.9.0-dev (build 12211, commit 7d7f02875)\nbuilt with GNU 15.2.0 for Linux x86_64\n",
+      "exit_code": 0,
+      "started_at": "2026-11-09T20:39:56.678956Z",
+      "ended_at": "2026-11-09T20:39:57.262856Z",
+      "network": false
+    },
+    {
+      "id": "download-models",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--name",
+        "vikawork-moe-vs-dense-cpu-131855-2",
+        "--network",
+        "bridge",
+        "--mount",
+        "type=bind,src=/fast/vikawork,dst=/work",
+        "--mount",
+        "type=bind,src=/scratch/vikawork/demo/moe-vs-dense-cpu/assets,dst=/assets,readonly",
+        "--workdir",
+        "/work",
+        "--entrypoint",
+        "python3",
+        "ghcr.io/ggml-org/llama.cpp:full-b12211@sha256:8960de326dd60972cc4d442531f4efa006416d5896da2a39f0def0b55cbcb0c2",
+        "/assets/scripts/download.py",
+        "[{\"path\": \"models/Qwen3-30B-A3B-Q4_K_M.gguf\", \"sha256\": \"0d003f6662faee786ed5da3e31b29c978de5ae5d275c8794c606a7f3c01aa8f5\", \"size\": 18556685824, \"url\": \"https://huggingface.co/Qwen/Qwen3-30B-A3B-GGUF/resolve/e4d4bafdfb96a411a163846265362aceb0b9c63a/Qwen3-30B-A3B-Q4_K_M.gguf\"}, {\"path\": \"models/Qwen3-32B-Q4_K_M.gguf\", \"sha256\": \"efd971561896866f0e910cce52761ca77b1b138090c7f15fe284676d57d1f689\", \"size\": 19762149024, \"url\": \"https://huggingface.co/Qwen/Qwen3-32B-GGUF/resolve/938a7432affaec9157f883a87164e2646ae17555/Qwen3-32B-Q4_K_M.gguf\"}]"
+      ],
+      "stdout": "download https://huggingface.co/Qwen/Qwen3-30B-A3B-GGUF/resolve/e4d4bafdfb96a411a163846265362aceb0b9c63a/Qwen3-30B-A3B-Q4_K_M.gguf\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/usr/lib/python3.14/urllib/request.py\", line 1321, in do_open\n    h.request(req.get_method(), req.selector, req.data, headers,\n    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n              encode_chunked=req.has_header('Transfer-encoding'))\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/http/client.py\", line 1367, in request\n    self._send_request(method, url, body, headers, encode_chunked)\n    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/http/client.py\", line 1413, in _send_request\n    self.endheaders(body, encode_chunked=encode_chunked)\n    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/http/client.py\", line 1362, in endheaders\n    self._send_output(message_body, encode_chunked=encode_chunked)\n    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/http/client.py\", line 1122, in _send_output\n    self.send(msg)\n    ~~~~~~~~~^^^^^\n  File \"/usr/lib/python3.14/http/client.py\", line 1066, in send\n    self.connect()\n    ~~~~~~~~~~~~^^\n  File \"/usr/lib/python3.14/http/client.py\", line 1501, in connect\n    super().connect()\n    ~~~~~~~~~~~~~~~^^\n  File \"/usr/lib/python3.14/http/client.py\", line 1032, in connect\n    self.sock = self._create_connection(\n                ~~~~~~~~~~~~~~~~~~~~~~~^\n        (self.host,self.port), self.timeout, self.source_address)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/socket.py\", line 870, in create_connection\n    raise exceptions[0]\n  File \"/usr/lib/python3.14/socket.py\", line 855, in create_connection\n    sock.connect(sa)\n    ~~~~~~~~~~~~^^^^\nOSError: [Errno 101] Network is unreachable\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/assets/scripts/download.py\", line 30, in <module>\n    with urllib.request.urlopen(url, timeout=120) as response, part.open(\"wb\") as dst:\n         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/urllib/request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/urllib/request.py\", line 487, in open\n    response = self._open(req, data)\n  File \"/usr/lib/python3.14/urllib/request.py\", line 504, in _open\n    result = self._call_chain(self.handle_open, protocol, protocol +\n                              '_open', req)\n  File \"/usr/lib/python3.14/urllib/request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"/usr/lib/python3.14/urllib/request.py\", line 1369, in https_open\n    return self.do_open(http.client.HTTPSConnection, req,\n           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                        context=self._context)\n                        ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/urllib/request.py\", line 1324, in do_open\n    raise URLError(err)\nurllib.error.URLError: <urlopen error [Errno 101] Network is unreachable>\n",
+      "exit_code": 1,
+      "started_at": "2026-11-09T20:39:57.313165Z",
+      "ended_at": "2026-11-09T20:40:08.672618Z",
+      "network": true
+    }
+  ]
+}
